@@ -1,6 +1,14 @@
+// function supports_history_api() {
+//   return !!(window.history && history.pushState);
+// }
+
 function supports_history_api() {
-  return !!(Modernizr.historymanagement);
+  if(Modernizr.history)
+    return true;
+  else
+    return false;
 }
+
 
 function swapPhoto(href) {
   var req = new XMLHttpRequest();
